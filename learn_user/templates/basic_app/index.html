@@ -1,0 +1,18 @@
+{% extends 'basic_app/base.html' %}
+
+{% block login_list %}
+{% if user.is_authenticated %}
+<li><a class="navbar-link" href="{% url 'logout' %}">logout</li>
+{% else %}
+<li><a class="navbar-link " href="{% url 'basic_app:user_login' %}" >loginn </li>
+{% endif %}
+{% endblock %}
+
+{%  block body_block %}
+
+<div class="jumbotron">
+  <h1>django level 5</h1>
+
+</div>
+
+{% endblock %}

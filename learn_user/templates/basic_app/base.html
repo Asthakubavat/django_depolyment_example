@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="navbar-brand"><a href="{% url 'index' %}">Brand</a></li>
+
+          <li class="navbar-link"><a href="{% url 'basic_app:register'  %}">Register</a></li>
+          <li class="navbar-link"><a href="{% url 'admin:index'  %}">Admin</a></li>
+        
+          {% block login_list %}
+
+          {% endblock %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+
+      {% block body_block %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
